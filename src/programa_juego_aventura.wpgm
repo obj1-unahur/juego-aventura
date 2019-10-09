@@ -1,0 +1,14 @@
+import wollok.game.*
+import juego_aventura.*
+
+program juego_aventura {
+
+	game.title("Oh qué aventura")
+	game.height(15)
+	game.width(15)
+	game.boardGround("fondoCompleto.png")
+
+	juego.configurarNivel1()	
+	
+	game.start()
+}
