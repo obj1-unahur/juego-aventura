@@ -32,7 +32,11 @@ object nivelLlaves {
 
 	method crearComida() {
 		// 3 comidas
-		return (1..3).map({ n => new Comida(position=juego.posicionArbitraria()) })
+		return [
+			new Comida(position=juego.posicionArbitraria(), energia = 10),
+			new Comida(position=juego.posicionArbitraria(), energia = 20),
+			new Comida(position=juego.posicionArbitraria(), energia = 30)
+		]
 	}
 
 	method recogerLlave(llave) {
@@ -44,7 +48,7 @@ object nivelLlaves {
 	}
 	
 	method recogerComida(comida) {
-		buscadorDeLlaves.aumentarEnergia(10)
+		buscadorDeLlaves.aumentarEnergia(comida.energia())
 		game.removeVisual(comida)		
 	}
 	

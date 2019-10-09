@@ -6,7 +6,6 @@ class Bloque {
 	const property image = "market.png" 	
 	
 	method esBloque() { return true }
-	method pasastePorPuertaNivel1() { }
 }
 
 object noBloque {
@@ -24,7 +23,8 @@ class Llave {
 
 class Comida {
 	var property position
-	const property image = "comida.png" 	
+	const property image = "comida.png"
+	var property energia = 10 	
 
 	method teEncontroElBuscador() {
 		nivelLlaves.recogerComida(self)
